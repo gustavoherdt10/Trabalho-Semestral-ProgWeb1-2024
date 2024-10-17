@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação do Setor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Avaliação do Setor</h1>
+        <form action="#" method="post">
+            <div class="question">
+                <label for="pergunta1">Como você avalia o atendimento?</label>
+                <input type="range" id="pergunta1" name="pergunta1" min="0" max="10" value="5">
+                <span id="value1">5</span>
+            </div>
+
+            <div class="question">
+                <label for="pergunta2">Como você avalia a limpeza?</label>
+                <input type="range" id="pergunta2" name="pergunta2" min="0" max="10" value="5">
+                <span id="value2">5</span>
+            </div>
+
+            <div class="question">
+                <label for="pergunta3">Você recomendaria esse setor?</label>
+                <input type="range" id="pergunta3" name="pergunta3" min="0" max="10" value="5">
+                <span id="value3">5</span>
+            </div>
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+    </div>
+
+    <script>
+        const sliders = document.querySelectorAll('input[type="range"]');
+        sliders.forEach(slider => {
+            slider.addEventListener('input', function() {
+                const valueSpan = this.nextElementSibling;
+                valueSpan.textContent = this.value;
+            });
+        });
+    </script>
+</body>
+</html>
