@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pergunta {
+    margin-bottom: 20px;
+}
+
+.notas {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nota {
+    background-color: #ddd;
+}
+
+.nota-0 {
+    background-color: #ff0000; /* Vermelho */
+}
+
+.nota-1, .nota-2, .nota-3 {
+    background-color: #ff4d4d; /* Tons de vermelho */
+}
+
+.nota-4, .nota-5, .nota-6 {
+    background-color: #ff9900; /* Laranja */
+}
+
+.nota-7, .nota-8 {
+    background-color: #ffff00; /* Amarelo */
+}
+
+.nota-9 {
+    background-color: #99ff33; /* Verde claro */
+}
+
+.nota-10 {
+    background-color: #33cc33; /* Verde */
+}
+
+input[type="radio"]:checked + label {
+    border: 2px solid #333;
+    background-color: #333;
+    color: white;
+}
