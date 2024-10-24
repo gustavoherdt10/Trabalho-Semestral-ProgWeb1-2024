@@ -11,7 +11,46 @@
         <h1>Avaliação de Serviços</h1>
         <form id="avaliacao-form">
             <div id="perguntas-container">
-                <!-- As perguntas serão carregadas dinamicamente aqui -->
+                <!-- Pergunta de exemplo -->
+                <div class="pergunta">
+                    <label for="pergunta-1">Como você avalia o atendimento na recepção?</label>
+                    <div class="notas">
+                        <!-- Cada nota terá seu input type radio e um label associado -->
+                        <input type="radio" id="nota-0" name="pergunta-1" value="0">
+                        <label for="nota-0" class="nota nota-0">0</label>
+                        
+                        <input type="radio" id="nota-1" name="pergunta-1" value="1">
+                        <label for="nota-1" class="nota nota-1">1</label>
+                        
+                        <input type="radio" id="nota-2" name="pergunta-1" value="2">
+                        <label for="nota-2" class="nota nota-2">2</label>
+                        
+                        <input type="radio" id="nota-3" name="pergunta-1" value="3">
+                        <label for="nota-3" class="nota nota-3">3</label>
+
+                        <input type="radio" id="nota-4" name="pergunta-1" value="4">
+                        <label for="nota-4" class="nota nota-4">4</label>
+
+                        <input type="radio" id="nota-5" name="pergunta-1" value="5">
+                        <label for="nota-5" class="nota nota-5">5</label>
+
+                        <input type="radio" id="nota-6" name="pergunta-1" value="6">
+                        <label for="nota-6" class="nota nota-6">6</label>
+
+                        <input type="radio" id="nota-7" name="pergunta-1" value="7">
+                        <label for="nota-7" class="nota nota-7">7</label>
+
+                        <input type="radio" id="nota-8" name="pergunta-1" value="8">
+                        <label for="nota-8" class="nota nota-8">8</label>
+
+                        <input type="radio" id="nota-9" name="pergunta-1" value="9">
+                        <label for="nota-9" class="nota nota-9">9</label>
+
+                        <input type="radio" id="nota-10" name="pergunta-1" value="10">
+                        <label for="nota-10" class="nota nota-10">10</label>
+                    </div>
+                </div>
+                <!-- Adicionar mais perguntas da mesma forma -->
             </div>
             <div class="feedback">
                 <label for="feedback">Feedback adicional (opcional):</label>
@@ -19,38 +58,9 @@
             </div>
             <button type="submit">Enviar Avaliação</button>
         </form>
-        <p class="anonymity-text">Sua avaliação é anônima e nenhuma informação pessoal é armazenada.</p>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("get_perguntas.php")
-                .then(response => response.json())
-                .then(data => {
-                    const perguntasContainer = document.getElementById("perguntas-container");
-                    data.forEach(pergunta => {
-                        const div = document.createElement("div");
-                        div.classList.add("pergunta");
-
-                        const label = document.createElement("label");
-                        label.textContent = pergunta.texto_pergunta;
-
-                        const select = document.createElement("select");
-                        select.classList.add("nota");
-                        for (let i = 0; i <= 10; i++) {
-                            const option = document.createElement("option");
-                            option.value = i;
-                            option.textContent = i;
-                            select.appendChild(option);
-                        }
-
-                        div.appendChild(label);
-                        div.appendChild(select);
-                        perguntasContainer.appendChild(div);
-                    });
-                })
-                .catch(error => console.error('Erro ao carregar perguntas:', error));
-        });
-    </script>
+    <footer>
+        <p class="anonymity-text">Sua avaliação é anônima e nenhuma informação pessoal é armazenada.</p>
+    </footer>
 </body>
 </html>
