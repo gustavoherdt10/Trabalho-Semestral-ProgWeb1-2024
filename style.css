@@ -70,7 +70,6 @@ footer {
     color: #555;
 }
 
-/* Estilo da Escala */
 .escala-container {
     display: flex;
     align-items: center;
@@ -101,7 +100,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Estilo das cores da escala */
 .escala-0 { background-color: #FF0000; }
 .escala-1 { background-color: #FF3300; }
 .escala-2 { background-color: #FF6600; }
@@ -114,7 +112,6 @@ footer {
 .escala-9 { background-color: #33FF00; }
 .escala-10 { background-color: #00FF00; }
 
-/* Responsividade para tablets */
 @media (max-width: 768px) {
     body {
         padding: 0.5rem;
@@ -139,7 +136,6 @@ footer {
     }
 }
 
-/* Responsividade para telas menores (smartphones) */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.3rem;

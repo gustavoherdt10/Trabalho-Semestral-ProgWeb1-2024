@@ -53,8 +53,7 @@ function enviarFormulario(event) {
         feedback
     });
 
-    // Exibe mensagem de agradecimento e redireciona para a página de agradecimento
-    alert("O Hospital Regional Alto Vale (HRAV) agradece sua resposta. Ela é muito importante para nós!");
+    // Redireciona diretamente para a página de agradecimento
     window.location.href = "agradecimento.html";
 }
 
