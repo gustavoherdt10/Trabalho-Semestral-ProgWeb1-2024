@@ -1,5 +1,4 @@
 <?php
-// admin.php
 
 require_once 'includes/config.php';
 require_once 'includes/funcoes.php';
