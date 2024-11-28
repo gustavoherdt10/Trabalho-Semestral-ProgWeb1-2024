@@ -53,7 +53,6 @@ function enviarFormulario(event) {
     window.location.href = "agradecimento.html";
 }
 
-// Inicializa o formulário e as perguntas
 document.addEventListener("DOMContentLoaded", () => {
     carregarPerguntas();
     document.getElementById("avaliacao-form").addEventListener("submit", enviarFormulario);

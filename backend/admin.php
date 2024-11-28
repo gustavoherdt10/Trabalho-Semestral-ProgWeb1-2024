@@ -1,15 +1,13 @@
 <?php
 // admin.php
 
-// Incluir arquivos necessários
 require_once 'includes/config.php';
 require_once 'includes/funcoes.php';
 
 session_start();
 
-// Verificar se o administrador está autenticado
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header("Location: login.php"); // Redireciona para a página de login
+    header("Location: login.php"); 
     exit;
 }
 
@@ -35,9 +33,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
             </ul>
         </nav>
 
-        <h2>Bem-vindo, <?php echo $_SESSION['admin_username']; ?>!</h2>
-
-        <!-- Aqui você pode adicionar conteúdo relacionado à exibição de avaliações ou perguntas -->
+        <h2>Olá <?php echo $_SESSION['admin_username']; ?>!</h2>
     </main>
 </body>
 </html>

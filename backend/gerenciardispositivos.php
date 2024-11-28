@@ -1,13 +1,10 @@
 <?php
-// gerenciar_dispositivos.php
 
 require_once 'includes/config.php';
 require_once 'includes/funcoes.php';    
 
-// Listar dispositivos
 $dispositivos = listarDispositivos();
 
-// Adicionar dispositivo
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_dispositivo'])) {
     $nome = sanitizeInput($_POST['nome']);
     adicionarDispositivo($nome);
@@ -15,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_dispositivo
     exit;
 }
 
-// Editar dispositivo
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_dispositivo'])) {
     $id = $_POST['id'];
     $nome = sanitizeInput($_POST['nome']);
@@ -25,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_dispositivo'])
     exit;
 }
 
-// Excluir dispositivo
 if (isset($_GET['excluir'])) {
     $id = $_GET['excluir'];
     excluirDispositivo($id);

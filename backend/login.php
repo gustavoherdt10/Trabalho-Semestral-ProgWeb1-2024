@@ -1,18 +1,14 @@
 <?php
-// login.php
-    
+
 require_once 'includes/config.php';
 require_once 'includes/funcoes.php';
 
 session_start();
 
-// Verificar se o administrador já está logado
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
-    header("Location: admin.php"); // Redireciona para o painel administrativo
-    exit;
+    header("Location: admin.php");
 }
 
-// Processar o formulário de login
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = sanitizeInput($_POST['username']);
     $password = sanitizeInput($_POST['password']);
@@ -20,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (authenticateAdmin($username, $password)) {
         $_SESSION['admin_logged_in'] = true;
         $_SESSION['admin_username'] = $username;
-        header("Location: admin.php"); // Redireciona para o painel administrativo
+        header("Location: admin.php");
         exit;
     } else {
         $error = "Usuário ou senha inválidos.";

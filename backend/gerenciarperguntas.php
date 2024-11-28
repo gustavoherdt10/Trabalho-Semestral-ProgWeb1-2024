@@ -4,10 +4,8 @@
 require_once 'includes/config.php';
 require_once 'includes/funcoes.php';
 
-// Listar perguntas
 $perguntas = listarPerguntas();
 
-// Formulário de adicionar pergunta
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_pergunta'])) {
     $texto = sanitizeInput($_POST['texto']);
     adicionarPergunta($texto);
@@ -15,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_pergunta'])
     exit;
 }
 
-// Formulário de editar pergunta
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_pergunta'])) {
     $id = $_POST['id'];
     $texto = sanitizeInput($_POST['texto']);
@@ -24,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_pergunta'])) {
     exit;
 }
 
-// Excluir pergunta
 if (isset($_GET['excluir'])) {
     $id = $_GET['excluir'];
     excluirPergunta($id);

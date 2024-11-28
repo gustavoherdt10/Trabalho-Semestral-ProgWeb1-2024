@@ -1,13 +1,10 @@
 <?php
-// gerenciar_setores.php
 
 require_once 'includes/config.php';
 require_once 'includes/funcoes.php';
 
-// Listar setores
 $setores = listarSetores();
 
-// Adicionar setor
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_setor'])) {
     $nome = sanitizeInput($_POST['nome']);
     adicionarSetor($nome);
@@ -15,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_setor'])) {
     exit;
 }
 
-// Editar setor
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_setor'])) {
     $id = $_POST['id'];
     $nome = sanitizeInput($_POST['nome']);
@@ -24,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_setor'])) {
     exit;
 }
 
-// Excluir setor
 if (isset($_GET['excluir'])) {
     $id = $_GET['excluir'];
     excluirSetor($id);
