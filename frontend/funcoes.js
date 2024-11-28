@@ -1,19 +1,23 @@
+// Array de perguntas simuladas (em uma aplicação real, essas seriam carregadas do servidor)
 const perguntas = [
-    "Como você avalia o atendimento no hospital?",
+    "Como você avalia o atendimento do Hospital?"
 ];
 
+// Função para carregar perguntas dinamicamente
 function carregarPerguntas() {
-    console.log("Carregando perguntas...");
     const container = document.getElementById("perguntas-container");
 
     perguntas.forEach((texto, index) => {
+        // Criar container da pergunta
         const perguntaDiv = document.createElement("div");
         perguntaDiv.classList.add("pergunta");
 
+        // Adicionar o texto da pergunta
         const label = document.createElement("label");
         label.textContent = texto;
         perguntaDiv.appendChild(label);
 
+        // Criar a escala de 0 a 10
         const escalaDiv = document.createElement("div");
         escalaDiv.classList.add("escala-container");
 
@@ -38,6 +42,7 @@ function carregarPerguntas() {
     });
 }
 
+// Função para enviar o formulário
 function enviarFormulario(event) {
     event.preventDefault();
 
@@ -55,11 +60,11 @@ function enviarFormulario(event) {
     });
 
     alert("O Hospital Regional Alto Vale (HRAV) agradece sua resposta. Ela é muito importante para nós!");
-    window.location.href = "agradecimento.html";
+    document.getElementById("avaliacao-form").reset();
 }
 
+// Inicializar
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM completamente carregado!");
     carregarPerguntas();
     document.getElementById("avaliacao-form").addEventListener("submit", enviarFormulario);
 });

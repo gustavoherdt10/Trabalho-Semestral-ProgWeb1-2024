@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login ADM</title>
+    <title>Login Administrador</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <h1>Área Administrativa - Login</h1>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <!-- Botão para retornar à página inicial -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="index.html" class="adm-button">Voltar à Página Inicial</a>
+        </div>
+
+        <footer>
+            <p>© 2024 Hospital Regional Alto Vale. Todos os direitos reservados.</p>
+        </footer>
+    </main>
 </body>
 </html>

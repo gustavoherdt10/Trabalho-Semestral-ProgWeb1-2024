@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do ADM</title>
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main>
+        <h1>Painel Administrativo</h1>
+        <nav>
+            <ul>
+                <li><a href="#cadastrar-perguntas">Cadastrar Perguntas</a></li>
+                <li><a href="#gerenciar-avaliacoes">Gerenciar Avaliações</a></li>
+                <li><a href="#sair">Sair</a></li>
+            </ul>
+        </nav>
+        <section id="cadastrar-perguntas">
+            <h2>Cadastrar Perguntas</h2>
+            <form>
+                <label for="nova-pergunta">Nova Pergunta:</label>
+                <input type="text" id="nova-pergunta" name="nova-pergunta" placeholder="Digite a nova pergunta" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+        <section id="gerenciar-avaliacoes">
+            <h2>Gerenciar Avaliações</h2>
+            <p>Aqui você pode visualizar e gerenciar as avaliações recebidas.</p>
+            <!-- Exemplo de tabela para exibir dados -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Nota Média</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Recepção</td>
+                        <td>8.5</td>
+                        <td><button>Ver Detalhes</button></td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </section>
+        <section id="sair">
+            <button onclick="window.location.href='loginadm.html'">Sair</button>
+        </section>
+    </main>
 </body>
 </html>

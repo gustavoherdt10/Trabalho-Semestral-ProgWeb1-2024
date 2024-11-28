@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação de Serviços do HRAV</title>
+    <title>Avaliação dos Serviços do HRAV</title>
     <link rel="stylesheet" href="style.css">
-    <script src="funcoes.js" defer></script> <!-- Atualizado -->
 </head>
 <body>
     <main>
-        <h1>Avaliação de Serviços do HRAV</h1>
-        <form id="avaliacao-form">
-            <div id="perguntas-container"></div>
-
-            <div class="form-group">
-                <label for="feedback">Em poucas palavras, descreva o que motivou a sua nota (Opcional):</label>
-                <textarea id="feedback" name="feedback" placeholder="Digite seu comentário..."></textarea>
+        <h1>Avalie os serviços do Hospital Regional Alto Vale</h1>
+        <form id="avaliacao-form" action="agradecimento.html" method="POST">
+            <div id="perguntas-container">
             </div>
+            <label for="feedback">Em poucas palavras, descreva o que motivou a sua nota? (Opcional):</label>
+            <textarea id="feedback" placeholder="Digite aqui suas sugestões ou observações"></textarea>
+            <button type="submit">Enviar Avaliação</button>
+        </form>        
 
-            <button type="submit" id="enviar">Enviar Avaliação</button>
-        </form>
-
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="loginadm.html" class="adm-button">Login ADM</a>
+        </div>
+        
         <footer>
             <p>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</p>
         </footer>
     </main>
+    <script src="funcoes.js"></script>
 </body>
 </html>
