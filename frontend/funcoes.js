@@ -2,7 +2,6 @@ const perguntas = [
     "Como você avalia o atendimento do Hospital?"
 ];
 
-// Função para carregar as perguntas dinamicamente
 function carregarPerguntas() {
     const container = document.getElementById("perguntas-container");
 
@@ -38,9 +37,8 @@ function carregarPerguntas() {
     });
 }
 
-// Função para enviar o formulário
 function enviarFormulario(event) {
-    event.preventDefault(); // Previne o envio do formulário padrão
+    event.preventDefault();
 
     const respostas = [];
     perguntas.forEach((_, index) => {
@@ -50,10 +48,8 @@ function enviarFormulario(event) {
 
     const feedback = document.getElementById("feedback").value;
 
-    // Simulação de envio
     console.log({ respostas, feedback });
-
-    // Redirecionamento para a página de agradecimento
+    
     window.location.href = "agradecimento.html";
 }
 

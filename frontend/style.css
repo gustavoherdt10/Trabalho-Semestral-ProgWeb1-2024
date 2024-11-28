@@ -61,22 +61,52 @@ footer {
 /* Estilo da Escala */
 .escala-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 10px 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.escala-container label {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0.1rem;
+    text-align: center;
+    transition: background-color 0.3s, opacity 0.2s;
 }
 
 .escala-container input {
     display: none;
 }
 
-.escala-container label {
-    font-size: 16px;
-    cursor: pointer;
-}
-
 .escala-container label:hover {
     opacity: 0.8;
 }
+
+/* Alterar cor ao clicar na opção da escala */
+.escala-container input:checked + label {
+    opacity: 1;
+    filter: brightness(85%);
+}
+
+/* Estilo das cores da escala */
+.escala-0 { background-color: #FF0000; }
+.escala-1 { background-color: #FF3300; }
+.escala-2 { background-color: #FF6600; }
+.escala-3 { background-color: #FF9900; }
+.escala-4 { background-color: #FFCC00; }
+.escala-5 { background-color: #FFFF00; }
+.escala-6 { background-color: #CCFF00; }
+.escala-7 { background-color: #99FF00; }
+.escala-8 { background-color: #66FF00; }
+.escala-9 { background-color: #33FF00; }
+.escala-10 { background-color: #00FF00; }
 
 /* Responsividade para tablets */
 @media (max-width: 768px) {
