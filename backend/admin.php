@@ -13,7 +13,6 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     exit;
 }
 
-// Lógica para exibir as avaliações ou gerenciar perguntas (dependendo da implementação)
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +29,8 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
         <nav>
             <ul>
                 <li><a href="gerenciar_perguntas.php">Gerenciar Perguntas</a></li>
-                <li><a href="visualizar_avaliacoes.php">Visualizar Avaliações</a></li>
+                <li><a href="gerenciar_dispositivos.php">Gerenciar Dispositivos</a></li>
+                <li><a href="gerenciar_setores.php">Gerenciar Setores</a></li>
                 <li><a href="logout.php">Sair</a></li>
             </ul>
         </nav>

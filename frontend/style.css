@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -108,6 +107,8 @@ footer {
 .escala-9 { background-color: #33FF00; }
 .escala-10 { background-color: #00FF00; }
 
+
+
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     body {
@@ -122,4 +123,57 @@ footer {
         font-size: 16px;
         padding: 12px 16px;
     }
+}
+
+/* Estilo para a página de Agradecimento */
+.caixa-agradecimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ocupa toda a altura da tela */
+    background-color: #f4f4f9; /* cor de fundo suave */
+}
+
+.caixa-agradecimento h1 {
+    font-family: 'sans-serif', cursive; /* fonte cursiva */
+    font-size: 2rem; /* tamanho da fonte */
+    font-weight: normal;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #007BFF; /* cor do texto */
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .caixa-agradecimento h1 {
+        font-size: 1.5rem; /* reduz o tamanho da fonte em telas menores */
+    }
+}
+
+/* Estilo para o botão de login no topo */
+.login-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.login-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
 }

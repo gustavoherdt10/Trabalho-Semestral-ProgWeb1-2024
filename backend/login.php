@@ -1,4 +1,5 @@
 <?php
+// login.php
 
 // Incluir arquivos necessários
 require_once 'includes/config.php';
