@@ -2,7 +2,7 @@
 define('DB_HOST', 'localhost');  // Endereço do servidor de banco de dados
 define('DB_PORT', '5432');       // Porta do PostgreSQL
 define('DB_NAME', 'TrabalhoSemestral');    // Nome do banco de dados
-define('DB_USER', 'gusherdt');    // Nome do usuário
+define('DB_USER', 'postgres');    // Nome do usuário
 define('DB_PASSWORD', '123456');  // Senha do usuário
 
 function getDbConnection() {

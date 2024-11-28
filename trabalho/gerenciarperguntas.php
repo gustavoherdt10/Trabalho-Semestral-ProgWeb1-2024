@@ -1,8 +1,8 @@
 
 <?php
 
-require_once 'includes/config.php';
-require_once 'includes/funcoes.php';
+require_once 'config.php';
+require_once 'funcoes.php';
 
 $perguntas = listarPerguntas();
 
